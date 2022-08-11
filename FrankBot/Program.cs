@@ -11,7 +11,20 @@ namespace FrankBot
         [Obsolete]
         static void Main()
         {
-
+            try
+            {
+                client = new TelegramBotClient(Token);
+                client.StartReceiving();
+                client.OnMessage += OnMessageHandler;
+                client.OnCallbackQuery += OnCallbackQweryHandlerAsync;
+                Console.ReadLine();
+                client.StopReceiving();
+            }
+            catch
+            {
+                Console.WriteLine("ERROR");
+                Console.ReadLine();
+            }
         }
         [Obsolete]
         private static async void OnCallbackQweryHandlerAsync(object sender, CallbackQueryEventArgs e)
