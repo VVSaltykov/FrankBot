@@ -9,6 +9,16 @@ namespace FrankBot.UI
 {
     public class Buttons
     {
-
+        public static IReplyMarkup Start()
+        {
+            return new InlineKeyboardMarkup(new List<List<InlineKeyboardButton>>
+            {
+                    new List<InlineKeyboardButton>
+                    {
+                        InlineKeyboardButton.WithCallbackData(text: "Start", callbackData: "Start")
+                    },
+            });
+            ;
+        }
     }
 }

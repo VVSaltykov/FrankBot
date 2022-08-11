@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace FrankBot.UI
 {
-    internal class Messages
+    public class Messages
     {
+        public static string Start = "Hi, this bot will help you find out the current exchange rate, according to the Central Bank of the Russian Federation";
     }
 }
