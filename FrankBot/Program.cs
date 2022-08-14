@@ -36,6 +36,10 @@ namespace FrankBot
             {
                 await client.SendTextMessageAsync(message.Chat.Id, Messages.Start, replyMarkup: Buttons.Start());
             }
+            else if (e.CallbackQuery.Data == "Currency")
+            {
+                await client.SendTextMessageAsync(message.Chat.Id, Messages.CurrencyMenu, replyMarkup: Buttons.CurrencyMenu());
+            }
         }
         [Obsolete]
         private static async void OnMessageHandler(object sender, MessageEventArgs e)
@@ -44,7 +48,7 @@ namespace FrankBot
 
             if (message.Text == "/start")
             {
-                await client.SendTextMessageAsync(message.Chat.Id, Messages.Start, replyMarkup: Buttons.Start());
+                await client.SendTextMessageAsync(message.Chat.Id, Messages.Start, replyMarkup: Buttons.StartMenu());
             }
         }
     }
