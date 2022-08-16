@@ -2,6 +2,7 @@
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Args;
 using FrankBot.UI;
+using FrankBot.Algorithms;
 
 namespace FrankBot
 {
@@ -39,6 +40,10 @@ namespace FrankBot
             else if (e.CallbackQuery.Data == "Currency")
             {
                 await client.SendTextMessageAsync(message.Chat.Id, Messages.CurrencyMenu, replyMarkup: Buttons.CurrencyMenu());
+            }
+            else if (e.CallbackQuery.Data == "USD")
+            {
+                await client.SendTextMessageAsync(message.Chat.Id, Messages.CurrencyMenu, replyMarkup: Buttons.Start());
             }
         }
         [Obsolete]
