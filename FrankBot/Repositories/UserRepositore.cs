@@ -11,7 +11,6 @@ namespace FrankBot.Repositories
 {
     public class UserRepositore
     {
-        public static AppDBContext appDbContext;
         public static async Task<bool> UserIsRegisteredAsync(long chatId)
         {
             try
@@ -26,7 +25,8 @@ namespace FrankBot.Repositories
         }
         public static async Task<User> GetUserByChatIdAsync(long chatId)
         {
-            var user = await appDbContext.Users.FirstOrDefaultAsync(u => u.ChatId == chatId);
+            using AppDBContext appDbContext = new AppDBContext();
+            var user = await appDbContext.Users.FindAsync(chatId);
             if (user == null)
             {
                 throw new NullException();
@@ -35,6 +35,7 @@ namespace FrankBot.Repositories
         }
         public static async Task AddUserAsync(User user)
         {
+            using AppDBContext appDbContext = new AppDBContext();
             try
             {
                 await appDbContext.Users.AddAsync(user);
@@ -47,6 +48,7 @@ namespace FrankBot.Repositories
         }
         public static async Task DeleteUserAsync(long chatId)
         {
+            using AppDBContext appDbContext = new AppDBContext();
             var user = GetUserByChatIdAsync(chatId);
             appDbContext.Users.Remove(await user);
             await appDbContext.SaveChangesAsync();

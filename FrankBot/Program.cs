@@ -13,6 +13,9 @@ namespace FrankBot
         [Obsolete]
         static void Main()
         {
+            using AppDBContext appDbContext = new AppDBContext();
+            appDbContext.Users.Add(new User { ChatId = 1 });
+            appDbContext.SaveChanges();
             try
             {
                 client = new TelegramBotClient(Token);
