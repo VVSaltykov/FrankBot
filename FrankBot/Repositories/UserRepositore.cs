@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using FrankBot.Models;
 using Microsoft.EntityFrameworkCore;
 using FrankBot.Exceptions;
+using FrankBot.Repositories;
 
 namespace FrankBot.Repositories
 {
@@ -53,5 +54,12 @@ namespace FrankBot.Repositories
             appDbContext.Users.Remove(await user);
             await appDbContext.SaveChangesAsync();
         }
+        /*public static async Task<User> GetMoneyAsync(long chatId, string message)
+        {
+            using AppDBContext appDBContext = new AppDBContext();
+            var user = GetUserByChatIdAsync(chatId);
+            user.Money = Convert.ToDouble(message);
+            await appDBContext.SaveChangesAsync();
+        }*/
     }
 }

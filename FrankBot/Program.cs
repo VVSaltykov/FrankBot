@@ -34,38 +34,39 @@ namespace FrankBot
             var message = e.CallbackQuery.Message;
             long chatId = e.CallbackQuery.Message.Chat.Id;
             Console.WriteLine(e.CallbackQuery.Data);
+            if (e.CallbackQuery.Data == "Start")
+            {
+                await client.SendTextMessageAsync(message.Chat.Id, Messages.Start, replyMarkup: Buttons.StartMenu());
+            }
+            else if (e.CallbackQuery.Data == "Registration")
+            {
+                if (await UserRepositore.UserIsRegisteredAsync(chatId))
+                {
+                    await UserRepositore.DeleteUserAsync(chatId);
+                    await client.SendTextMessageAsync(message.Chat.Id, Messages.RegistrationMenu);
+                    await UserRepositore.AddUserAsync(new User
+                    {
+                        ChatId = chatId
+                    });
+                    await client.SendTextMessageAsync(message.Chat.Id, Messages.Start, replyMarkup: Buttons.StartMenuAfterReg());
+                }
+                else
+                {
+                    await client.SendTextMessageAsync(message.Chat.Id, Messages.RegistrationMenu);
+                    await UserRepositore.AddUserAsync(new User
+                    {
+                        ChatId = chatId
+                    });
+                    await client.SendTextMessageAsync(message.Chat.Id, Messages.Start, replyMarkup: Buttons.StartMenuAfterReg());
+                }
+            }
             if ((await UserRepositore.UserIsRegisteredAsync(chatId)))
             {
-                if (e.CallbackQuery.Data == "Start")
-                {
-                    await client.SendTextMessageAsync(message.Chat.Id, Messages.Start, replyMarkup: Buttons.StartMenu());
-                }
-                else if (e.CallbackQuery.Data == "Currency")
+                if (e.CallbackQuery.Data == "Currency")
                 {
                     await client.SendTextMessageAsync(message.Chat.Id, Messages.CurrencyMenu, replyMarkup: Buttons.CurrencyMenu());
                 }
-                else if (e.CallbackQuery.Data == "Registration")
-                {
-                    if (await UserRepositore.UserIsRegisteredAsync(chatId))
-                    {
-                        await UserRepositore.DeleteUserAsync(chatId);
-                        await client.SendTextMessageAsync(message.Chat.Id, Messages.RegistrationMenu);
-                        await UserRepositore.AddUserAsync(new User
-                        {
-                            ChatId = chatId
-                        });
-                        await client.SendTextMessageAsync(message.Chat.Id, Messages.Start, replyMarkup: Buttons.StartMenuAfterReg());
-                    }
-                    else
-                    {
-                        await client.SendTextMessageAsync(message.Chat.Id, Messages.RegistrationMenu);
-                        await UserRepositore.AddUserAsync(new User
-                        {
-                            ChatId = chatId
-                        });
-                        await client.SendTextMessageAsync(message.Chat.Id, Messages.Start, replyMarkup: Buttons.StartMenuAfterReg());
-                    }
-                }
+
                 else if (e.CallbackQuery.Data == "USD")
                 {
                     await client.SendTextMessageAsync(message.Chat.Id, Messages.USD, replyMarkup: Buttons.StartMenu());
