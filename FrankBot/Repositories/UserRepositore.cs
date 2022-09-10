@@ -12,6 +12,7 @@ namespace FrankBot.Repositories
 {
     public class UserRepositore
     {
+        public static AppDBContext appDBContext = new AppDBContext();
         public static async Task<bool> UserIsRegisteredAsync(long chatId)
         {
             try
@@ -19,15 +20,14 @@ namespace FrankBot.Repositories
                 await GetUserByChatIdAsync(chatId);
                 return true;
             }
-            catch
+            catch (NullException) 
             {
                 return false;
             }
         }
         public static async Task<User> GetUserByChatIdAsync(long chatId)
         {
-            using AppDBContext appDbContext = new AppDBContext();
-            var user = await appDbContext.Users.FindAsync(chatId);
+            var user = await appDBContext.Users.Where(u => u.ChatId == chatId).FirstOrDefaultAsync();
             if (user == null)
             {
                 throw new NullException();
@@ -36,11 +36,10 @@ namespace FrankBot.Repositories
         }
         public static async Task AddUserAsync(User user)
         {
-            using AppDBContext appDbContext = new AppDBContext();
             try
             {
-                await appDbContext.Users.AddAsync(user);
-                await appDbContext.SaveChangesAsync();
+                await appDBContext.Users.AddAsync(user);
+                await appDBContext.SaveChangesAsync();
             }
             catch (NullReferenceException ex)
             {
@@ -49,17 +48,15 @@ namespace FrankBot.Repositories
         }
         public static async Task DeleteUserAsync(long chatId)
         {
-            using AppDBContext appDbContext = new AppDBContext();
             var user = GetUserByChatIdAsync(chatId);
-            appDbContext.Users.Remove(await user);
-            await appDbContext.SaveChangesAsync();
-        }
-        /*public static async Task<User> GetMoneyAsync(long chatId, string message)
-        {
-            using AppDBContext appDBContext = new AppDBContext();
-            var user = GetUserByChatIdAsync(chatId);
-            user.Money = Convert.ToDouble(message);
+            appDBContext.Users.Remove(await user);
             await appDBContext.SaveChangesAsync();
-        }*/
+        }
+        public static async Task MoneyAddAsync(long chatId, string message)
+        {
+            var user = await GetUserByChatIdAsync(chatId);
+            user.Money = message;
+            await appDBContext.SaveChangesAsync(); 
+        }
     }
 }

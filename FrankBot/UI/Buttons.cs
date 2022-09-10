@@ -38,6 +38,17 @@ namespace FrankBot.UI
                 new List<InlineKeyboardButton>
                 {
                     InlineKeyboardButton.WithCallbackData(text: "Currency", callbackData: "Currency"),
+                    InlineKeyboardButton.WithCallbackData(text: "Functions", callbackData: "Functions")
+                }
+            });
+        }
+        public static IReplyMarkup FunctionsMenu()
+        {
+            return new InlineKeyboardMarkup(new List<List<InlineKeyboardButton>>
+            {
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "Money", callbackData: "Money"),
                 }
             });
         }

@@ -12,6 +12,7 @@ namespace FrankBot.UI
         public static string Start = "Hi, this bot will help you find out the current exchange rate, according to the Central Bank of the Russian Federation.";
         public static string CurrencyMenu = "Select the currency you want to know the exchange rate of";
         public static string RegistrationMenu = "Hello, you are now registered, so the function of transferring a certain amount to another currency is available to you!";
+        public static string FunctionsMenu = "Functions menu";
         public static string USD = $"At the moment, the USD to RUB exchange rate is as follows: {CurrentRepositore.USDReader()}";
         public static string EUR = $"At the moment, the EUR to RUB exchange rate is as follows: {CurrentRepositore.EURReader()}";
         public static string AUD = $"At the moment, the AUD to RUB exchange rate is as follows: {CurrentRepositore.AUDReader()}";

@@ -5,7 +5,7 @@ namespace FrankBot
 {
     public class AppDBContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; } = null!;
 
         public AppDBContext()
         {
