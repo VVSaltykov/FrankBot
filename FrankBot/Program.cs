@@ -363,6 +363,180 @@ namespace FrankBot
                     {
                         await client.SendTextMessageAsync(message.Chat.Id, Messages.JPY, replyMarkup: Buttons.StartMenuAfterReg());
                     }
+                    else if (e.CallbackQuery.Data == "Calculation")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.Calculation, replyMarkup: Buttons.CalculationCurrencyMenu());
+                    }
+                    else if (e.CallbackQuery.Data == "USDCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.USD);
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationUSDAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "EURCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.EUR, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationEURAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "AUDCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.AUD, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationAUDAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "AZNCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.AZN, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationAZNAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "GBPCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.GBP, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationGBPAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "AMDCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.AMD, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationAMDAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "BYNCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.BYN, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationBYNAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "BGNCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.BGN, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationBGNAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "BRLCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.BRL, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationBRLAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "HUFCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.HUF, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationHUFAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "HKDCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.HKD, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationHKDAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "DKKCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.DKK, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationDKKAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "INRCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.INR, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationINRAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "KZTCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.KZT, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationKZTAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "CADCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.CAD, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationCADAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "KGSCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.KGS, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationKGSAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "CNYCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.CNY, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationCNYAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "MDLCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.MDL, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationMDLAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "NOKCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.NOK, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationNOKAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "PLNCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.PLN, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationPLNAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "RONCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.RON, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationRONAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "XDRCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.XDR, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationXDRAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "SGDCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.SGD, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationSGDAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "TJSCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.TJS, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationTJSAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "TRYCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.TRY, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationTRYAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "TMTCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.TMT, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationTMTAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "UZSCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.UZS, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationUZSAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "UAHCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.UAH, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationUAHAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "CZKCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.CZK, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationCZKAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "SEKCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.SEK, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationSEKAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "CHFCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.CHF, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationCHFAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "ZARCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.ZAR, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationZARAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "KRWCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.KRW, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationKRWAsync(chatId)}");
+                    }
+                    else if (e.CallbackQuery.Data == "JPYCalc")
+                    {
+                        await client.SendTextMessageAsync(message.Chat.Id, Messages.JPY, replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"{await UserRepositore.CalculationJPYAsync(chatId)}");
+                    }
                 }
             }
             catch (NullException)
@@ -389,7 +563,9 @@ namespace FrankBot
                     {
                         var user = await UserRepositore.GetUserByChatIdAsync(chatId);
                         await UserRepositore.MoneyAddAsync(chatId, message.Text);
-                        await client.SendTextMessageAsync(message.Chat.Id, $"{user.ChatId}, {user.Money}", replyMarkup: Buttons.StartMenuAfterReg());
+                        await client.SendTextMessageAsync(message.Chat.Id, $"Your parameters:\n" +
+                            $"ChatId: {user.ChatId}\n" +
+                            $"Money: {user.Money}\n", replyMarkup: Buttons.StartMenuAfterReg());
                     }
                 }
             }

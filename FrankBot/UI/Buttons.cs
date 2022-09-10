@@ -49,6 +49,7 @@ namespace FrankBot.UI
                 new List<InlineKeyboardButton>
                 {
                     InlineKeyboardButton.WithCallbackData(text: "Money", callbackData: "Money"),
+                    InlineKeyboardButton.WithCallbackData(text: "Calculation", callbackData: "Calculation")
                 }
             });
         }
@@ -125,6 +126,82 @@ namespace FrankBot.UI
                 new List<InlineKeyboardButton>
                 {
                     InlineKeyboardButton.WithCallbackData(text: "JPY", callbackData: "JPY")
+                },
+            });
+        }
+        public static IReplyMarkup CalculationCurrencyMenu()
+        {
+            return new InlineKeyboardMarkup(new List<List<InlineKeyboardButton>>
+            {
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "AUD", callbackData: "AUDCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "AZN", callbackData: "AZNCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "GBP", callbackData: "GBPCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "AMD", callbackData: "AMDCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "BYN", callbackData: "BYNCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "BGN", callbackData: "BGNCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "BRL", callbackData: "BRLCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "HUF", callbackData: "HUFCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "HKD", callbackData: "HKDCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "DKK", callbackData: "DKKCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "USD", callbackData: "USDCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "EUR", callbackData: "EURCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "INR", callbackData: "INRCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "KZT", callbackData: "KZTCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "CAD", callbackData: "CADCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "KGS", callbackData: "KGSCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "CNY", callbackData: "CNYCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "MDL", callbackData: "MDLCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "NOK", callbackData: "NOKCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "PLN", callbackData: "PLNCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "RON", callbackData: "RONCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "XDR", callbackData: "XDRCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "SGD", callbackData: "SGDCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "TJS", callbackData: "TJSCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "TRY", callbackData: "TRYCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "TMT", callbackData: "TMTCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "UZS", callbackData: "UZSCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "UAH", callbackData: "UAHCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "CZK", callbackData: "CZKCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "SEK", callbackData: "SEKCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "CHF", callbackData: "CHFCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "ZAR", callbackData: "ZARCalc"),
+                    InlineKeyboardButton.WithCallbackData(text: "KRW", callbackData: "KRWCalc")
+                },
+                new List<InlineKeyboardButton>
+                {
+                    InlineKeyboardButton.WithCallbackData(text: "JPY", callbackData: "JPYCalc")
                 },
             });
         }
