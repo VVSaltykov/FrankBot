@@ -1,5 +1,6 @@
 ﻿using FrankBot.Models;
 using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql;
 
 namespace FrankBot
 {
@@ -13,7 +14,8 @@ namespace FrankBot
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=FrankUsers;Trusted_Connection=True;");
+            optionsBuilder.UseMySql("",
+                new MySqlServerVersion(new Version(8, 0, 30)));
         }
     }
 }
