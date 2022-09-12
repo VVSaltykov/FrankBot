@@ -61,205 +61,205 @@ namespace FrankBot.Repositories
         public static async Task<decimal> CalculationUSDAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.USDReader();
+            decimal calc = CurrentRepositore.USDReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationAUDAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.AUDReader();
+            decimal calc = CurrentRepositore.AUDReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationAZNAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.AZNReader();
+            decimal calc = CurrentRepositore.AZNReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationGBPAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.GBPReader();
+            decimal calc = CurrentRepositore.GBPReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationAMDAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.AMDReader();
+            decimal calc = CurrentRepositore.AMDReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationBYNAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.BYNReader();
+            decimal calc = CurrentRepositore.BYNReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationBGNAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.BGNReader();
+            decimal calc = CurrentRepositore.BGNReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationBRLAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.BRLReader();
+            decimal calc = CurrentRepositore.BRLReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationHUFAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.HUFReader();
+            decimal calc = CurrentRepositore.HUFReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationHKDAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.HKDReader();
+            decimal calc = CurrentRepositore.HKDReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationDKKAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.DKKReader();
+            decimal calc = CurrentRepositore.DKKReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationEURAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.EURReader();
+            decimal calc = CurrentRepositore.EURReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationINRAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.INRReader();
+            decimal calc = CurrentRepositore.INRReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationKZTAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.KZTReader();
+            decimal calc = CurrentRepositore.KZTReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationCADAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.CADReader();
+            decimal calc = CurrentRepositore.CADReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationKGSAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.KGSReader();
+            decimal calc = CurrentRepositore.KGSReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationCNYAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.CNYReader();
+            decimal calc = CurrentRepositore.CNYReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationMDLAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.MDLReader();
+            decimal calc = CurrentRepositore.MDLReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationNOKAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.NOKReader();
+            decimal calc = CurrentRepositore.NOKReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationPLNAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.PLNReader();
+            decimal calc = CurrentRepositore.PLNReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationRONAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.RONReader();
+            decimal calc = CurrentRepositore.RONReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationXDRAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.XDRReader();
+            decimal calc = CurrentRepositore.XDRReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationSGDAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.SGDReader();
+            decimal calc = CurrentRepositore.SGDReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationTJSAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.TJSReader();
+            decimal calc = CurrentRepositore.TJSReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationTRYAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.TRYReader();
+            decimal calc = CurrentRepositore.TRYReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationTMTAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.TMTReader();
+            decimal calc = CurrentRepositore.TMTReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationUZSAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.UZSReader();
+            decimal calc = CurrentRepositore.UZSReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationUAHAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.UAHReader();
+            decimal calc = CurrentRepositore.UAHReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationCZKAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.CZKReader();
+            decimal calc = CurrentRepositore.CZKReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationSEKAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.SEKReader();
+            decimal calc = CurrentRepositore.SEKReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationCHFAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.CHFReader();
+            decimal calc = CurrentRepositore.CHFReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationZARAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.ZARReader();
+            decimal calc = CurrentRepositore.ZARReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationKRWAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.KRWReader();
+            decimal calc = CurrentRepositore.KRWReader() / decimal.Parse(user.Money);
             return calc;
         }
         public static async Task<decimal> CalculationJPYAsync(long chatId)
         {
             var user = await GetUserByChatIdAsync(chatId);
-            decimal calc = decimal.Parse(user.Money) * CurrentRepositore.JPYReader();
+            decimal calc = CurrentRepositore.JPYReader() / decimal.Parse(user.Money);
             return calc;
         }
     }
